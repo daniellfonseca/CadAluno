@@ -3,22 +3,22 @@ package com.danielF.praticaPOO.classes;
 import com.danielF.praticaPOO.interfaces.PermitirAcesso;
 
 //Nesta classe temos atributos e metodos referentes ao Diretor herdando alguns atributos e metodos da classe Pessoa.
-public class Diretor extends Pessoa implements PermitirAcesso{
+public class Diretor extends Pessoa implements PermitirAcesso {
 
 	private String registroEducaçao;
 	private int tempoDirecao;
 	private String titulacao;
 	private String login;
 	private String senha;
-	
+
 	public Diretor(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
-		
+
 	}
-	
+
 	public Diretor() {
-		
+
 	}
 
 	public String getRegistroEducaçao() {
@@ -59,13 +59,13 @@ public class Diretor extends Pessoa implements PermitirAcesso{
 
 	@Override
 	public boolean autenticar(String login, String senha) {
-		
+
 		return autenticar();
 	}
 
 	@Override
 	public boolean autenticar() {
-		
+
 		return login.equals("admin") && senha.equals("master");
 	}
 

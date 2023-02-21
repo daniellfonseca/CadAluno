@@ -3,7 +3,7 @@ package com.danielF.praticaPOO.classes;
 import com.danielF.praticaPOO.interfaces.PermitirAcesso;
 
 //Nesta classe temos atributos e metodos referentes ao secretario herdando alguns atributos e metodos da classe Pessoa.
-public class Secretario extends Pessoa implements PermitirAcesso{
+public class Secretario extends Pessoa implements PermitirAcesso {
 
 	private int registro;
 	private String nivelCargo;
@@ -69,5 +69,5 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 
 		return login.equals("admin") && senha.equals("admin");
 	}
-	
+
 }

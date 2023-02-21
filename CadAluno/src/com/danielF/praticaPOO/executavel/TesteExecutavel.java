@@ -28,9 +28,10 @@ public class TesteExecutavel {
 		// com o "permitiracesso" fazendo referencia a interface, é instanciado um
 		// objeto da classe secretario passando parametros "login" e "senha" no
 		// construtor da classe
-		
 
-		/*travando o contrato de autenticar somenete para quem realmente tem o contrato*/		
+		/*
+		 * travando o contrato de autenticar somenete para quem realmente tem o contrato
+		 */
 		if (new Autenticar(new Diretor(login, senha)).autenticar()) {// se TRUE acessa, se FALSE nao acessa;
 
 			List<Aluno> alunos = new ArrayList<Aluno>();// lista de alunos;
@@ -181,5 +182,5 @@ public class TesteExecutavel {
 			System.out.println("Entre com login e senha corretos.");
 		}
 	}
-	
+
 }

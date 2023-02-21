@@ -51,5 +51,5 @@ public abstract class Pessoa {
 
 	// método obrigatório nas subclasses;
 	public abstract double salario();
-	
+
 }
