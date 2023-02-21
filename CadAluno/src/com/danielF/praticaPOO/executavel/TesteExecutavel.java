@@ -47,26 +47,26 @@ public class TesteExecutavel {
 								 */
 			while (addAluno == 0) {
 				String nome = JOptionPane.showInputDialog("Para adicionar alunos, insira o Nome do aluno: ");
-				/*
-				 * String RegistroGeral = JOptionPane.showInputDialog("Insira o RG: "); String
-				 * idade = JOptionPane.showInputDialog("Insira a idade: "); String
-				 * dataNascimento = JOptionPane.showInputDialog("Data de Nascimento: "); String
-				 * nomeEscola = JOptionPane.showInputDialog("Nome da Escola: "); String nomeMae
-				 * = JOptionPane.showInputDialog("Nome da Mãe: "); String dataMatricula =
-				 * JOptionPane.showInputDialog("Data da Matricula: "); String serieMatriculado =
-				 * JOptionPane.showInputDialog("Serie Matriculado: ");
-				 */
+
+				String RegistroGeral = JOptionPane.showInputDialog("Insira o RG: ");
+				String idade = JOptionPane.showInputDialog("Insira a idade: ");
+				String dataNascimento = JOptionPane.showInputDialog("Data de Nascimento: ");
+				String nomeEscola = JOptionPane.showInputDialog("Nome da Escola: ");
+				String nomeMae = JOptionPane.showInputDialog("Nome da Mãe: ");
+				String dataMatricula = JOptionPane.showInputDialog("Data da Matricula: ");
+				String serieMatriculado = JOptionPane.showInputDialog("Serie Matriculado: ");
 
 				Aluno aluno = new Aluno();
 
 				aluno.setNome(nome);
-				/*
-				 * aluno.setRegistroGeral(RegistroGeral);
-				 * aluno.setIdade(Integer.parseInt(idade));
-				 * aluno.setDataNascimento(dataNascimento); aluno.setNomeEscola(nomeEscola);
-				 * aluno.setNomeMae(nomeMae); aluno.setDataMatricula(dataMatricula);
-				 * aluno.setSerieMatriculado(serieMatriculado);
-				 */
+
+				aluno.setRegistroGeral(RegistroGeral);
+				aluno.setIdade(Integer.parseInt(idade));
+				aluno.setDataNascimento(dataNascimento);
+				aluno.setNomeEscola(nomeEscola);
+				aluno.setNomeMae(nomeMae);
+				aluno.setDataMatricula(dataMatricula);
+				aluno.setSerieMatriculado(serieMatriculado);
 
 				int addDisciplinas = 0;
 				while (addDisciplinas == 0) {// condiçao para adicionar quantas disciplinas o usuario desejar. Opção de
