@@ -10,7 +10,7 @@ import com.danielF.praticaPOO.classes.Disciplina;
 import com.danielF.praticaPOO.classesAuxiliares.Autenticar;
 import com.danielF.praticaPOO.constantes.StatusAluno;
 
-/*Este é um projeto com intuito de praticar meus conhecimentos em Java (Logica de Programaçao e Orientaçao a objetos: 
+/*Este  é um projeto com intuito de praticar meus conhecimentos em Java (Logica de Programaçao e Orientaçao a objetos: 
  * herança, polimorfismo, interfaces, listas, arrays, matrizes, etc.)
  * Consiste em uma simulação de um sistema de uma escola,
  * onde temos alunos, diretor, e secretario, para cada aluno temos disciplinas e por sua vez notas de cada disciplina;
