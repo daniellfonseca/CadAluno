@@ -1,11 +1,12 @@
 package com.danielF.praticaPOO.classes;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Disciplina {
 
 	private String disciplina;
-	private double nota;
+	private double[] nota = new double[4];
 
 	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
@@ -15,17 +16,33 @@ public class Disciplina {
 		return disciplina;
 	}
 
-	public void setNota(Double nota) {
-		this.nota = nota;
-	}
-
-	public Double getNota() {
+	public double[] getNota() {
 		return nota;
 	}
 
+	public void setNota(double[] nota) {
+		this.nota = nota;
+	}
+
+	public double getMediaNotasAno() {
+		
+		double somaNotas = 0;
+		
+		for(int posicao = 0 ; posicao < nota.length ; posicao++) {
+			somaNotas += nota[posicao]; 
+		}
+		
+		return somaNotas / 4;
+		
+	} 
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(disciplina, nota);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(nota);
+		result = prime * result + Objects.hash(disciplina);
+		return result;
 	}
 
 	@Override
@@ -37,13 +54,12 @@ public class Disciplina {
 		if (getClass() != obj.getClass())
 			return false;
 		Disciplina other = (Disciplina) obj;
-		return Objects.equals(disciplina, other.disciplina)
-				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+		return Objects.equals(disciplina, other.disciplina) && Arrays.equals(nota, other.nota);
 	}
 
 	@Override
 	public String toString() {
-		return "Disciplina=  " + disciplina + ",  Nota=" + nota;
+		return "Disciplina [disciplina=" + disciplina + ", nota=" + Arrays.toString(nota) + "]";
 	}
 
 }
