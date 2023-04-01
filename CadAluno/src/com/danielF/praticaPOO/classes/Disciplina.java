@@ -25,17 +25,17 @@ public class Disciplina {
 	}
 
 	public double getMediaNotas() {
-		
+
 		double somaNotas = 0;
-		
-		for(int posicao = 0 ; posicao < nota.length ; posicao++) {
-			somaNotas += nota[posicao]; 
+
+		for (int posicao = 0; posicao < nota.length; posicao++) {
+			somaNotas += nota[posicao];
 		}
-		
+
 		return somaNotas / 4;
-		
-	} 
-	
+
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

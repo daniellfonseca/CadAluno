@@ -21,7 +21,7 @@ public class ArrayVetores {
 		disciplina1.setNota(notasDisciplina1);
 
 		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("Java");
+		disciplina2.setDisciplina("Banco de Dados");
 		disciplina2.setNota(notasDisciplina2);
 
 		aluno.getDisciplinas().add(disciplina1);
@@ -35,11 +35,32 @@ public class ArrayVetores {
 			System.out.println("NOME DISCIPLINA " + d.getDisciplina());
 			System.out.println("AS NOTAS SãO= ");
 
-			for (int posicao = 0; posicao < d.getNota().length; posicao++) {
+			double maiorNota = 0.0;
+			double menorNota = 0.0;
 
-				System.out.println("Nota " + (posicao+1) + " = " + d.getNota()[posicao]);
+			for (int posicao = 0; posicao < d.getNota().length; posicao++) {
+				System.out.println("Nota " + (posicao + 1) + " = " + d.getNota()[posicao]);
+
+				if (posicao == 0) {
+					maiorNota = d.getNota()[posicao];
+				} else {
+					if (d.getNota()[posicao] > maiorNota) {
+						maiorNota = d.getNota()[posicao];
+					}
+				}
+
+				if (posicao == 0) {
+					menorNota = d.getNota()[posicao];
+				} else {
+					if (d.getNota()[posicao] < menorNota) {
+						menorNota = d.getNota()[posicao];
+					}
+				}
 
 			}
+
+			System.out.println(
+					"A maior nota em " + d.getDisciplina() + " é: " + maiorNota + ". E a menor nota é: " + menorNota);
 
 		}
 
