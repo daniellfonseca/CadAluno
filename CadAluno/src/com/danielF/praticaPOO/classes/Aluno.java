@@ -85,17 +85,17 @@ public class Aluno extends Pessoa {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-	public double getMediaNota() {
+	public double getMediaGeralNota() {
 		double somaNotas = 0.0;
 
 		for (Disciplina disciplina : disciplinas) {
-			somaNotas += disciplina.getMediaNotasAno();
+			somaNotas += disciplina.getMediaNotas();
 		}
 		return somaNotas / disciplinas.size();
 	}
 
 	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota();
+		double media = this.getMediaGeralNota();
 		if (media >= 50) {
 			return true;
 		} else {
@@ -105,7 +105,7 @@ public class Aluno extends Pessoa {
 
 	// metodo teste de estrutura de condição retornando string.
 	public String getSituacaoAluno() {
-		double media = this.getMediaNota();
+		double media = this.getMediaGeralNota();
 		if (media >= 50) {
 			if (media >= 70) {
 				return StatusAluno.APROVADO;

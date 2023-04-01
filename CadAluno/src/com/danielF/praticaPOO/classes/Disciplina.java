@@ -24,7 +24,7 @@ public class Disciplina {
 		this.nota = nota;
 	}
 
-	public double getMediaNotasAno() {
+	public double getMediaNotas() {
 		
 		double somaNotas = 0;
 		

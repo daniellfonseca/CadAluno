@@ -170,19 +170,19 @@ public class TesteExecutavel {
 				System.out.println("--------------Lista de alunos Aprovados-----------------");
 				for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
 					System.out.println("Nome =" + aluno.getNome() + " Resultado = " + aluno.getSituacaoAluno()
-							+ " com a média de = " + aluno.getMediaNota());
+							+ " com a média de = " + aluno.getMediaGeralNota());
 				}
 
 				System.out.println("--------------Lista de alunos em Recuperação-----------------");
 				for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
 					System.out.println("Nome =" + aluno.getNome() + " Resultado = " + aluno.getSituacaoAluno()
-							+ " com a média de = " + aluno.getMediaNota());
+							+ " com a média de = " + aluno.getMediaGeralNota());
 				}
 
 				System.out.println("--------------Lista de alunos Reprovados-----------------");
 				for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 					System.out.println("Nome =" + aluno.getNome() + " Resultado = " + aluno.getSituacaoAluno()
-							+ " com a média de = " + aluno.getMediaNota());
+							+ " com a média de = " + aluno.getMediaGeralNota());
 				}
 
 			} else {
